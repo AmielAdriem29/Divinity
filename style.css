@@ -79,14 +79,15 @@ nav li a:hover {
 .maki-bg {
     background-image: url("images/makiCoverDesktop.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .banner {
-    height: 90vh;
+    height: 120vh;
     display: flex;
-    place-content: center;
-    align-items: center;
+    margin-top: 10rem;
+    place-content: top;
+    place-content: start center;
     isolation: isolate;
     position: relative;
 }
@@ -166,6 +167,17 @@ nav li a:hover {
 
 /* ~~~~~ PRODUCT GALLERY SECTION ~~~~~~ */
 
+.gradient-bg {
+background: rgb(59,59,59);
+background: linear-gradient(0deg, rgba(59,59,59,1) 22%, rgba(97,97,97,1) 41%, rgba(253,187,45,0) 100%);
+}
+
+.product-bg {
+  background: rgb(59,59,59);
+  background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(97,97,97,1) 13%, rgba(253,187,45,0) 100%);  background-size: cover;
+  background-position: center;
+}
+
 .product-body {
     display: flex;
     align-items: center;
@@ -174,10 +186,8 @@ nav li a:hover {
 }
 
 .container {
-    max-width: 1200px;
-    width: 95%;
-    background: rgb(47,47,47);
-background: linear-gradient(0deg, rgba(47,47,47,1) 0%, rgba(253,187,45,0) 100%);
+  max-width: 1200px;
+  width: 95%;
 }
 
 .slider-wrapper .image-list {
@@ -207,16 +217,9 @@ background: linear-gradient(0deg, rgba(47,47,47,1) 0%, rgba(253,187,45,0) 100%);
   flex-direction: column;
   overflow-x: auto;
   overflow-y: hidden;
-  background-image: url(images/gojoCover.jpg);
   background-size: cover;
     background-position: center;
 
-}
-
-.gojo-bg-image {
-  background-image: url("images/makiCoverDesktop.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .grid-container {
@@ -228,6 +231,7 @@ background: linear-gradient(0deg, rgba(47,47,47,1) 0%, rgba(253,187,45,0) 100%);
   flex: 1;
   color: white;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .grid-element {
