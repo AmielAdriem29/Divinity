@@ -79,20 +79,24 @@ nav li a:hover {
   background-image: url("images/makiCoverDesktop.jpg");
   background-size: cover;
   background-position: top;
+  height: 100vh;
 }
 
 .overlay {
   background-image: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3),
-    rgba(132, 132, 132, 1)
+    rgb(157, 157, 157)
   );
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .banner {
-  height: 120vh;
+  flex: 1;
   display: flex;
-  margin-top: 10rem;
   place-content: top;
   place-content: start center;
   isolation: isolate;
@@ -111,6 +115,10 @@ nav li a:hover {
   justify-content: center;
   margin: 60px 0px 20px 0px;
   font-size: 1.5rem;
+}
+
+#banner-section {
+  margin-top: 10rem;
 }
 
 .countdown-container {
@@ -214,6 +222,7 @@ nav li a:hover {
   overflow-x: auto;
   scrollbar-width: 10px;
   grid-template-columns: repeat(10, 1fr);
+  overflow-y: hidden;
 }
 
 .slider-wrapper .image-list::-webkit-scrollbar {
@@ -296,10 +305,6 @@ nav li a:hover {
 .text-content {
   padding: 0 1rem 1rem 1rem;
   font-size: 1rem;
-}
-
-#container {
-  overflow-y: scroll;
 }
 
 .container .slider-scrollbar {
