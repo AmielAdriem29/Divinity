@@ -1,188 +1,204 @@
-
 @font-face {
-    font-family: 'Ponter-Bold';
-    src:url('font/Ponter-Bold.ttf.woff') format('woff'),
-        url('font/Ponter-Bold.ttf.svg#Ponter-Bold') format('svg'),
-        url('font/Ponter-Bold.ttf.eot'),
-        url('font/Ponter-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: lighter;
-    font-style: normal;
+  font-family: "Ponter-Bold";
+  src: url("font/Ponter-Bold.ttf.woff") format("woff"),
+    url("font/Ponter-Bold.ttf.svg#Ponter-Bold") format("svg"),
+    url("font/Ponter-Bold.ttf.eot"),
+    url("font/Ponter-Bold.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: lighter;
+  font-style: normal;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html:root{
-    scroll-behavior: smooth;
+html:root {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Ponter-Bold';
-    background-color: white;
+  font-family: "Ponter-Bold";
+  background-color: white;
 }
 
 /* ~~~~~ NAVIGATION BAR ~~~~~~ */
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 10px 20px;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-navbar {
-    justify-content: flex-start;
-    flex: 1;
+  justify-content: flex-start;
+  flex: 1;
 }
 
 .right-navbar {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 nav li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 nav li a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 nav li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* ~~~~~ COUNTDOWN BANNER SECTION ~~~~~~ */
 
 .header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    overflow-y: scroll;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .maki-bg {
-    background-image: url("images/makiCoverDesktop.jpg");
-    background-size: cover;
-    background-position: top;
+  background-image: url("images/makiCoverDesktop.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.overlay {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(132, 132, 132, 1)
+  );
 }
 
 .banner {
-    height: 120vh;
-    display: flex;
-    margin-top: 10rem;
-    place-content: top;
-    place-content: start center;
-    isolation: isolate;
-    position: relative;
+  height: 120vh;
+  display: flex;
+  margin-top: 10rem;
+  place-content: top;
+  place-content: start center;
+  isolation: isolate;
+  position: relative;
 }
 
 .banner:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
 }
 
 .banner h2 {
-    display: flex;
-    justify-content: center;
-    margin: 60px 0px 20px 0px;
-    font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0px 20px 0px;
+  font-size: 1.5rem;
 }
 
 .countdown-container {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .timer-container {
-    display: flex;
+  display: flex;
 }
 
 .timer-container-values {
-    width: 10rem;
-    text-align: center;
-    justify-content: center;
-    font-size: 60px;
-    padding: 15x 10px;
-    color: rgb(0, 0, 0);
+  width: 10rem;
+  text-align: center;
+  justify-content: center;
+  font-size: 60px;
+  padding: 15x 10px;
+  color: rgb(0, 0, 0);
 }
 
 .small-text {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 /* ~~~~~ POINTER ~~~~~~ */
 
 .scroll-button {
   position: absolute;
-  bottom: 10%; 
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-
 }
 
 .scroll-button a {
-    display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    transition: transform 0.3s ease, background-color 0.3s ease; 
-    box-shadow: 0 0 10px rgba(40, 35, 105, 0.5); 
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(40, 35, 105, 0.5);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
 
 .scroll-button a:hover {
-    transform: translateY(20px); 
+  transform: translateY(20px);
 }
 
 .scroll-button img {
-    width: 100%;
-    height: 100%; 
-    object-fit: contain; 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* ~~~~~ PRODUCT GALLERY SECTION ~~~~~~ */
 
 .gradient-bg {
-background: rgb(59,59,59);
-background: linear-gradient(0deg, rgba(59,59,59,1) 22%, rgba(97,97,97,1) 41%, rgba(253,187,45,0) 100%);
+  background: rgb(59, 59, 59);
+  background: linear-gradient(
+    0deg,
+    rgba(59, 59, 59, 1) 22%,
+    rgba(97, 97, 97, 1) 41%,
+    rgba(253, 187, 45, 0) 100%
+  );
 }
 
 .product-bg {
-  background: rgb(59,59,59);
-  background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(97,97,97,1) 13%, rgba(253,187,45,0) 100%);  background-size: cover;
+  background: rgb(59, 59, 59);
+  background: linear-gradient(
+    0deg,
+    rgba(59, 59, 59, 1) 0%,
+    rgba(97, 97, 97, 1) 13%,
+    rgba(253, 187, 45, 0) 100%
+  );
+  background-size: cover;
   background-position: center;
 }
 
 .product-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
@@ -198,11 +214,10 @@ background: linear-gradient(0deg, rgba(59,59,59,1) 22%, rgba(97,97,97,1) 41%, rg
   overflow-x: auto;
   scrollbar-width: 10px;
   grid-template-columns: repeat(10, 1fr);
-
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar{
-    display: none;
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
 }
 
 .slider-wrapper .image-list .image-item {
@@ -218,8 +233,7 @@ background: linear-gradient(0deg, rgba(59,59,59,1) 22%, rgba(97,97,97,1) 41%, rg
   overflow-x: auto;
   overflow-y: hidden;
   background-size: cover;
-    background-position: center;
-
+  background-position: center;
 }
 
 .grid-container {
@@ -239,11 +253,11 @@ background: linear-gradient(0deg, rgba(59,59,59,1) 22%, rgba(97,97,97,1) 41%, rg
   display: grid;
   grid-template-rows: 7.9fr 0fr;
   transition: background-color 0.3s ease;
-   transition: transform 0.3 ease-in-out;
+  transition: transform 0.3 ease-in-out;
 }
 
 .grid-element:hover {
-  background-color: #3B585C;
+  background-color: #3b585c;
   scale: 1.01;
 }
 
@@ -284,66 +298,63 @@ background: linear-gradient(0deg, rgba(59,59,59,1) 22%, rgba(97,97,97,1) 41%, rg
   font-size: 1rem;
 }
 
-
-
-
-#container{
-    overflow-y: scroll;
+#container {
+  overflow-y: scroll;
 }
 
 .container .slider-scrollbar {
-    height: 24px;
-    width: 100%;
-    background: red;
-    display: flex;
-    align-items: center;
+  height: 24px;
+  width: 100%;
+  background: red;
+  display: flex;
+  align-items: center;
 }
 
 .slider-scrollbar .scrollbar-track {
-    height: 2px;
-    width: 100%;
-    background-color: white;
-    position: relative;
-    border-radius: 4px;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  border-radius: 4px;
 }
 
 .slider-scrollbar:hover .scrollbar-track {
-    height: 4px;
+  height: 4px;
 }
 
 .slider-scrollbar .scrollbar-thumb {
-    position: absolute;
-    height: 2px;
-    height: 100%;
-    width: 50%;
-    background-color: black;
-    border-radius: inherit;
-    cursor: grab;
+  position: absolute;
+  height: 2px;
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  border-radius: inherit;
+  cursor: grab;
 }
 
 .slider-scrollbar .scrollbar-track:active {
-    cursor: grabbing;
-    height: 8px;
-    top: -2px;
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
 }
 
 .slider-scrollbar .scrollbar-thumb::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10px;
-    bottom: -10px;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
 }
 
 .slider-scrollbar .scrollbar-thumb:active {
-    cursor: grabbing;
-    height: 8px;
-    top: -2px;
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
 }
 
 .slider-scrollbar .scrollbar-thumb::after {
-    content: "";
-    position: absolute;
-    left: 0;
+  content: "";
+  position: absolute;
+  left: 0;
 }
